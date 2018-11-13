@@ -12,19 +12,24 @@
 var winner = "";
 var randomNumber = Math.random();
 var userChoice = "";
+var computerChoice = ""
+
+if (randomNumber > .99) {
+    computerChoice="rock"
+    // $("#computerChoice").html("rock");
+}else if (randomNumber <.33) {
+    computerChoice="paper"
+    // $("#computerChoice").html("paper");
+}else {
+    computerChoice="scissors"
+    // $("#computerChoice").html("scissors")
+};
 
 $("#shoot").click(function() {
    $("#userChoice").text($("#input").val()); 
-  $("#computerChoice").text(randomNumber); 
+  $("#computerChoice").text(computerChoice); 
 });
 
-if (randomNumber > .80) {
-    $("#computerChoice").html("rock");
-}else if (randomNumber <.20) {
-    $("#computerChoice").html("paper");
-}else {
-    $("#computerChoice").html("scissors")
-};
 
 
 
